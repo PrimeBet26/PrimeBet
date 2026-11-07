@@ -234,6 +234,238 @@
                     <button onclick="selectBet('Google above $250', 2.08)">Above $250 <b>2.08x</b></button>
                     <button onclick="selectBet('Google below $250', 1.82)">Below $250 <b>1.82x</b></button>
                 </div>
+                    <!-- CRYPTO -->
+    <div class="market-category">
+        <h2>₿ Crypto</h2>
+
+        <div class="market-grid">
+            <div class="market-card">
+                <small>BTC</small>
+                <h3>Bitcoin</h3>
+                <div class="market-buttons">
+                    <button onclick="selectBet('Bitcoin above $125K', 2.12)">Above $125K <b>2.12x</b></button>
+                    <button onclick="selectBet('Bitcoin below $125K', 1.75)">Below $125K <b>1.75x</b></button>
+                </div>
+            </div>
+
+            <div class="market-card">
+                <small>ETH</small>
+                <h3>Ethereum</h3>
+                <div class="market-buttons">
+                    <button onclick="selectBet('Ethereum above $5K', 2.05)">Above $5K <b>2.05x</b></button>
+                    <button onclick="selectBet('Ethereum below $5K', 1.85)">Below $5K <b>1.85x</b></button>
+                </div>
+            </div>
+
+            <div class="market-card">
+                <small>SOL</small>
+                <h3>Solana</h3>
+                <div class="market-buttons">
+                    <button onclick="selectBet('Solana above $300', 2.10)">Above $300 <b>2.10x</b></button>
+                    <button onclick="selectBet('Solana below $300', 1.80)">Below $300 <b>1.80x</b></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TECHNOLOGY -->
+    <div class="market-category">
+        <h2>💻 Technology</h2>
+
+        <div class="market-grid">
+            <div class="market-card">
+                <small>AI</small>
+                <h3>Major AI announcement</h3>
+                <div class="market-buttons">
+                    <button onclick="selectBet('Major AI announcement this year', 1.55)">Yes <b>1.55x</b></button>
+                    <button onclick="selectBet('No major AI announcement this year', 2.20)">No <b>2.20x</b></button>
+                </div>
+            </div>
+
+            <div class="market-card">
+                <small>TECH</small>
+                <h3>New Apple product announcement</h3>
+                <div class="market-buttons">
+                    <button onclick="selectBet('Apple announces a new product', 1.70)">Yes <b>1.70x</b></button>
+                    <button onclick="selectBet('Apple does not announce a new product', 2.00)">No <b>2.00x</b></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CULTURE -->
+    <div class="market-category">
+        <h2>🎬 Culture</h2>
+
+        <div class="market-grid">
+            <div class="market-card">
+                <small>ENTERTAINMENT</small>
+                <h3>Will a movie earn $1 billion?</h3>
+                <div class="market-buttons">
+                    <button onclick="selectBet('A movie earns $1 billion', 1.90)">Yes <b>1.90x</b></button>
+                    <button onclick="selectBet('No movie earns $1 billion', 1.90)">No <b>1.90x</b></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- INTERNET -->
+    <div class="market-category">
+        <h2>🌐 Internet</h2>
+
+        <div class="market-grid">
+            <div class="market-card">
+                <small>SOCIAL MEDIA</small>
+                <h3>Major viral internet trend</h3>
+                <div class="market-buttons">
+                    <button onclick="selectBet('A major viral internet trend happens', 1.80)">Yes <b>1.80x</b></button>
+                    <button onclick="selectBet('No major viral internet trend happens', 1.95)">No <b>1.95x</b></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<!-- POLITICS PAGE -->
+<main id="politicsPage" class="hidden">
+
+    <div class="page-title">
+        <h1>🏛️ Politics</h1>
+        <p>Political event markets • Demo only</p>
+    </div>
+
+    <div class="market-category">
+        <h2>🇺🇸 White House & Politics</h2>
+
+        <div class="market-grid">
+            <div class="market-card politics-market">
+                <small>LONG-TERM EVENT • DEMO MARKET</small>
+
+                <h3>How many times will Trump visit Mar-a-Lago?</h3>
+
+                <p class="market-description">
+                    Counting period: May 1, 2026 – May 31, 2027.
+                    Select the range you think the final count will fall into.
+                </p>
+
+                <div class="market-buttons">
+                    <button onclick="selectBet('Trump visits Mar-a-Lago 0–9 times (May 2026–May 2027)', 3.50)">
+                        0–9 visits <b>3.50x</b>
+                    </button>
+
+                    <button onclick="selectBet('Trump visits Mar-a-Lago 10–19 times (May 2026–May 2027)', 2.40)">
+                        10–19 visits <b>2.40x</b>
+                    </button>
+
+                    <button onclick="selectBet('Trump visits Mar-a-Lago 20–29 times (May 2026–May 2027)', 2.10)">
+                        20–29 visits <b>2.10x</b>
+                    </button>
+
+                    <button onclick="selectBet('Trump visits Mar-a-Lago 30 or more times (May 2026–May 2027)', 3.00)">
+                        30+ visits <b>3.00x</b>
+                    </button>
+                </div>
+
+                <p class="demo-disclaimer">
+                    Demo multipliers only — not real market odds or forecasts.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<!-- MY BETS PAGE -->
+<main id="betsPage" class="hidden">
+
+    <div class="page-title">
+        <h1>My Bets</h1>
+        <p>Track your picks and results</p>
+    </div>
+
+    <div class="bets-summary">
+        <div class="summary-card">
+            <small>Total Bets</small>
+            <strong id="totalBets">0</strong>
+        </div>
+
+        <div class="summary-card">
+            <small>Total Wagered</small>
+            <strong id="totalWagered">$0.00</strong>
+        </div>
+
+        <div class="summary-card">
+            <small>Potential Payout</small>
+            <strong id="potentialPayout">$0.00</strong>
+        </div>
+    </div>
+
+    <div id="betsContainer"></div>
+
+</main>
+
+<!-- BET SLIP -->
+<aside id="betSlip" class="bet-slip hidden">
+
+    <div class="bet-slip-header">
+        <h2>Bet Slip</h2>
+        <button onclick="closeBetSlip()">✕</button>
+    </div>
+
+    <div class="selected-bet">
+        <small>YOUR SELECTION</small>
+        <strong id="selectedBetText">Select a market</strong>
+        <span id="selectedOddsText">1.00x</span>
+    </div>
+
+    <label for="betAmount">Amount</label>
+
+    <input
+        type="number"
+        id="betAmount"
+        placeholder="Enter amount"
+        min="0"
+        step="0.01"
+        oninput="updateBetSlip()"
+    >
+
+    <div class="quick-amounts">
+        <button onclick="setBetAmount(10)">$10</button>
+        <button onclick="setBetAmount(25)">$25</button>
+        <button onclick="setBetAmount(50)">$50</button>
+        <button onclick="setBetAmount(100)">$100</button>
+    </div>
+
+    <div class="bet-slip-details">
+        <div>
+            <span>Potential profit</span>
+            <strong id="potentialProfit">$0.00</strong>
+        </div>
+
+        <div>
+            <span>Potential return</span>
+            <strong id="potentialReturn">$0.00</strong>
+        </div>
+    </div>
+
+    <button class="place-bet-btn" onclick="placeBet()">
+        Place Demo Bet
+    </button>
+
+    <p class="demo-disclaimer">
+        GambaBet is a play-money demo. No real money or prizes.
+    </p>
+
+</aside>
+
+<!-- NOTIFICATION -->
+<div id="notification" class="notification hidden"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
             </div>
 
         </div>
