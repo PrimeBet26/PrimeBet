@@ -5,8 +5,8 @@
 
 const DATA_VERSION = "gambabet-v10";
 
-let balance = 0;
-let bets = [];
+let balance = 100;
+let bets = [20];
 let selectedBet = "";
 let selectedOdds = 1;
 let selectedOpenedOdds = 1;
