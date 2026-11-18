@@ -282,7 +282,7 @@ function initialize() {
     }
 
     if (storedVersion !== DATA_VERSION) {
-        balance = 0;
+        balance = 20;
         bets = createDemoBets();
         saveData();
     } else {
