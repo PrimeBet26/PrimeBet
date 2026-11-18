@@ -1,4 +1,4 @@
-const DATA_VERSION = "primebet-v5";
+const DATA_VERSION = "gambabet-v6";
 
 let balance;
 let bets;
@@ -322,10 +322,7 @@ let marketMovers = [
         odds: 1.55
     }
 
-];
-
-
-// ==================================================
+];// ==================================================
 // INITIALIZE
 // ==================================================
 
@@ -333,7 +330,7 @@ function initialize() {
 
     if (localStorage.getItem("primebetDataVersion") !== DATA_VERSION) {
 
-        balance = 2301.56;
+        balance = 4532.98;
 
         bets = createDemoBets();
 
@@ -347,7 +344,7 @@ function initialize() {
     } else {
 
         balance =
-            Number(localStorage.getItem("balance")) || 2301.56;
+            Number(localStorage.getItem("balance")) || 4532.98;
 
         bets =
             JSON.parse(localStorage.getItem("bets")) || [];
@@ -498,67 +495,6 @@ function generateBetID() {
 // PAGE SWITCHING
 // ==================================================
 
-function showPage(page) {
-
-    document
-        .getElementById("sportsPage")
-        .classList.toggle(
-            "hidden",
-            page !== "sports"
-        );
-
-    document
-        .getElementById("marketsPage")
-        .classList.toggle(
-            "hidden",
-            page !== "markets"
-        );
-
-    document
-        .getElementById("betsPage")
-        .classList.toggle(
-            "hidden",
-            page !== "bets"
-        );
-
-
-    document
-        .querySelectorAll(".nav-btn")
-        .forEach(button =>
-            button.classList.remove("active")
-        );
-
-
-    if (page === "sports") {
-
-        document
-            .querySelectorAll(".nav-btn")[0]
-            .classList.add("active");
-
-    }
-
-    else if (page === "markets") {
-
-        document
-            .querySelectorAll(".nav-btn")[1]
-            .classList.add("active");
-
-    }
-
-    else {
-
-        document
-            .querySelectorAll(".nav-btn")[2]
-            .classList.add("active");
-
-        renderBets();
-
-    }
-
-}
-
-
-// ==================================================
 // LOAD SPORTS
 // ==================================================
 
@@ -679,6 +615,486 @@ function loadSport(sport, button) {
 
 
         html += `
+            <div class="prop">
+
+                <div class="prop-name">
+                    ${prop[0]}
+                </div>
+
+                <div class="prop-buttons">
+
+                    <button
+                        onclick="selectBet('${prop[0]} ${prop[1]}', ${overOdds.toFixed(2)})"
+                    >
+
+                        <span>
+                            ${prop[1]}
+                        </span>
+
+                        <b>
+                            ${overOdds.toFixed(2)}x
+                        </b>
+
+                    </button>
+
+
+                    <button
+                        onclick="selectBet('${prop[0]} ${prop[2]}', ${underOdds.toFixed(2)})"
+                    >
+
+                        <span>
+                            ${prop[2]}
+                        </span>
+
+                        <b>
+                            ${underOdds.toFixed(2)}x
+                        </b>
+
+                    </button>
+
+                </div>
+
+            </div>
+        `;
+
+    });
+
+
+    html += `
+            </div>
+        </div>
+    `;
+
+
+    html += `
+        <div class="game-section">
+
+            <div class="section-heading">
+                <h2>🏆 Futures</h2>
+                <span>Season markets</span>
+            </div>
+
+            <div class="future-grid">
+    `;
+
+
+    data.futures.forEach(future => {
+
+        html += `
+            <button
+                class="future-button"
+                onclick="selectBet('${future[0]}', ${future[1]})"
+            >
+
+                <span>
+                    ${future[0]}
+                </span>
+
+                <b>
+                    ${future[1].toFixed(2)}x
+                </b>
+
+            </button>
+        `;
+
+    });
+
+
+    html += `
+            </div>
+        </div>
+    `;
+
+
+    container.innerHTML = html;
+
+}// ==================================================
+// INITIALIZE
+// ==================================================
+
+function initialize() {
+
+    if (localStorage.getItem("primebetDataVersion") !== DATA_VERSION) {
+
+        balance = 4532.98;
+
+        bets = createDemoBets();
+
+        localStorage.setItem(
+            "primebetDataVersion",
+            DATA_VERSION
+        );
+
+        saveData();
+
+    } else {
+
+        balance =
+            Number(localStorage.getItem("balance")) || 4532.98;
+
+        bets =
+            JSON.parse(localStorage.getItem("bets")) || [];
+
+    }
+
+    updateBalance();
+
+    loadSport(
+        "NFL",
+        document.querySelector(".sport-tab")
+    );
+
+    renderMarketMovers();
+
+    startMarketMovement();
+}
+
+
+// ==================================================
+// DEMO BET HISTORY
+// ==================================================
+
+function createDemoBets() {
+
+    return [
+
+        {
+            id: generateBetID(),
+            selection: "Packers",
+            odds: 1.61,
+            openedOdds: 1.61,
+            amount: 25,
+            payout: 40.25,
+            status: "PENDING",
+            date: "Today"
+        },
+
+        {
+            id: generateBetID(),
+            selection: "Timberwolves",
+            odds: 2.05,
+            openedOdds: 2.05,
+            amount: 50,
+            payout: 102.50,
+            status: "PENDING",
+            date: "Today"
+        },
+
+        {
+            id: generateBetID(),
+            selection: "Bitcoin above $125,000",
+            odds: 2.12,
+            openedOdds: 2.12,
+            amount: 100,
+            payout: 212.00,
+            status: "PENDING",
+            date: "Today"
+        },
+
+        {
+            id: generateBetID(),
+            selection: "Trump mentions tariffs",
+            odds: 2.10,
+            openedOdds: 2.10,
+            amount: 50,
+            payout: 105.00,
+            status: "PENDING",
+            date: "Today"
+        },
+
+        {
+            id: generateBetID(),
+            selection: "MrBeast next video — Challenge",
+            odds: 1.95,
+            openedOdds: 1.95,
+            amount: 40,
+            payout: 78.00,
+            status: "PENDING",
+            date: "Today"
+        },
+
+        {
+            id: generateBetID(),
+            selection: "Eagles",
+            odds: 1.78,
+            openedOdds: 1.78,
+            amount: 75,
+            payout: 133.50,
+            status: "WON",
+            date: "Yesterday"
+        },
+
+        {
+            id: generateBetID(),
+            selection: "Longest Field Goal Over 49.5 yards",
+            odds: 1.91,
+            openedOdds: 1.91,
+            amount: 100,
+            payout: 191.00,
+            status: "WON",
+            date: "Yesterday"
+        },
+
+        {
+            id: generateBetID(),
+            selection: "Celtics",
+            odds: 1.72,
+            openedOdds: 1.72,
+            amount: 150,
+            payout: 258.00,
+            status: "LOST",
+            date: "2 days ago"
+        },
+
+        {
+            id: generateBetID(),
+            selection: "Dodgers",
+            odds: 1.55,
+            openedOdds: 1.55,
+            amount: 200,
+            payout: 310.00,
+            status: "WON",
+            date: "2 days ago"
+        }
+
+    ];
+}
+
+
+// ==================================================
+// GENERATE BET ID
+// ==================================================
+
+function generateBetID() {
+
+    const number =
+        Math.floor(
+            100000 +
+            Math.random() * 900000
+        );
+
+    return "PB-" + number;
+}
+
+
+// ==================================================
+// PAGE SWITCHING
+// ==================================================
+
+// LOAD SPORTS
+// ==================================================
+
+function loadSport(sport, button) {
+
+    document
+        .querySelectorAll(".sport-tab")
+        .forEach(btn =>
+            btn.classList.remove("active")
+        );
+
+    if (button) {
+        button.classList.add("active");
+    }
+
+
+    document
+        .getElementById("sportTitle")
+        .textContent = sport;
+
+
+    const container =
+        document.getElementById(
+            "sportsContainer"
+        );
+
+
+    const data = sports[sport];
+
+    let html = "";
+
+
+    html += `
+        <div class="game-section">
+
+            <div class="section-heading">
+                <h2>🏟️ Games</h2>
+                <span>Moneyline</span>
+            </div>
+    `;
+
+
+    data.games.forEach(game => {
+
+        html += `
+            <div class="game-card">
+
+                <div class="game-header">
+
+                    <div class="game-title">
+                        ${game.title}
+                    </div>
+
+                    <div class="game-time">
+                        ${game.time}
+                    </div>
+
+                </div>
+
+                <div class="game-odds">
+        `;
+
+
+        game.markets.forEach(market => {
+
+            html += `
+                <button
+                    class="game-bet-button"
+                    onclick="selectBet('${market[0]} — ${game.title}', ${market[1]})"
+                >
+
+                    <span>
+                        ${market[0]}
+                    </span>
+
+                    <b>
+                        ${Number(market[1]).toFixed(2)}x
+                    </b>
+
+                </button>
+            `;
+
+        });
+
+
+        html += `
+                </div>
+            </div>
+        `;
+
+    });
+
+
+    html += `
+        </div>
+    `;
+
+
+    html += `
+        <div class="game-section">
+
+            <div class="section-heading">
+                <h2>🔥 Player & Game Props</h2>
+                <span>Popular</span>
+            </div>
+
+            <div class="prop-grid">
+    `;
+
+
+    data.props.forEach((prop, index) => {
+
+        const overOdds =
+            1.75 + (index % 5) * 0.08;
+
+        const underOdds =
+            1.80 + ((index + 2) % 5) * 0.07;
+
+
+        html += `
+            <div class="prop">
+
+                <div class="prop-name">
+                    ${prop[0]}
+                </div>
+
+                <div class="prop-buttons">
+
+                    <button
+                        onclick="selectBet('${prop[0]} ${prop[1]}', ${overOdds.toFixed(2)})"
+                    >
+
+                        <span>
+                            ${prop[1]}
+                        </span>
+
+                        <b>
+                            ${overOdds.toFixed(2)}x
+                        </b>
+
+                    </button>
+
+
+                    <button
+                        onclick="selectBet('${prop[0]} ${prop[2]}', ${underOdds.toFixed(2)})"
+                    >
+
+                        <span>
+                            ${prop[2]}
+                        </span>
+
+                        <b>
+                            ${underOdds.toFixed(2)}x
+                        </b>
+
+                    </button>
+
+                </div>
+
+            </div>
+        `;
+
+    });
+
+
+    html += `
+            </div>
+        </div>
+    `;
+
+
+    html += `
+        <div class="game-section">
+
+            <div class="section-heading">
+                <h2>🏆 Futures</h2>
+                <span>Long term</span>
+            </div>
+
+            <div class="future-list">
+    `;
+
+
+    data.futures.forEach(future => {
+
+        html += `
+            <div class="future">
+
+                <span>
+                    ${future[0]}
+                </span>
+
+                <button
+                    onclick="selectBet('${future[0]}', ${future[1]})"
+                >
+
+                    ${Number(future[1]).toFixed(2)}x
+
+                </button>
+
+            </div>
+        `;
+
+    });
+
+
+    html += `
+            </div>
+        </div>
+    `;
+
+
+    container.innerHTML = html;
+}        html += `
             <div class="prop">
 
                 <div class="prop-name">
@@ -1058,8 +1474,7 @@ function showBetConfirmation(bet) {
                 Bet placed!
             </strong>
 
-            <span>
-                ${bet.selection}
+            <span>                ${bet.selection}
             </span>
 
             <small>
@@ -1152,51 +1567,28 @@ function renderMarketMovers() {
     });
 
 }
+
+
 function showPage(page) {
 
-    const pages = [
-        "sportsPage",
-        "marketsPage",
-        "betsPage",
-        "profilePage"
-    ];
+    const pages = ["sports", "markets", "politics", "bets", "profile"];
 
-    pages.forEach(function(pageId) {
-
-        const element = document.getElementById(pageId);
-
-        if (element) {
-            element.classList.add("hidden");
-        }
-
+    pages.forEach(pageName => {
+        const element = document.getElementById(pageName + "Page");
+        if (element) element.classList.toggle("hidden", pageName !== page);
     });
 
-
-    const selectedPage = document.getElementById(page + "Page");
-
-    if (selectedPage) {
-        selectedPage.classList.remove("hidden");
-    }
-
-
-    // Update navigation buttons
-
-    document.querySelectorAll(".nav-btn").forEach(function(button) {
-        button.classList.remove("active");
+    document.querySelectorAll(".nav-btn").forEach(button => {
+        button.classList.toggle("active", button.dataset.page === page);
     });
-
-
-    // Close bet slip when changing pages
 
     const betSlip = document.getElementById("betSlip");
+    if (betSlip) betSlip.classList.add("hidden");
 
-    if (betSlip) {
-        betSlip.classList.add("hidden");
-    }
-
+    if (page === "bets") renderBets();
 }
 
-// ==================================================
+
 // RANDOM MARKET MOVEMENT
 // ==================================================
 
@@ -1276,21 +1668,23 @@ function renderBets() {
     });
 
 
-    document
-        .getElementById("103")
-        .textContent = bets.length;
+    const totalBetsElement = document.getElementById("totalBets");
+    const totalWageredElement = document.getElementById("totalWagered");
+    const potentialPayoutElement = document.getElementById("potentialPayout");
 
-
-    document
-        .getElementById("3,092")
-        .textContent =
-        "$" + totalWagered.toFixed(2);
-
-
-    document
-        .getElementById("potentialPayout")
-        .textContent =
-        "$" + potentialPayout.toFixed(2);
+    if (totalBetsElement) totalBetsElement.textContent = bets.length;
+    if (totalWageredElement) {
+        totalWageredElement.textContent = "$" + totalWagered.toLocaleString("en-US", {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        });
+    }
+    if (potentialPayoutElement) {
+        potentialPayoutElement.textContent = "$" + potentialPayout.toLocaleString("en-US", {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        });
+    }
 
 
     const pendingBets =
@@ -1381,8 +1775,7 @@ function renderBets() {
 }
 
 
-// ==================================================
-// ODDS MOVEMENT
+// ==================================================// ODDS MOVEMENT
 // ==================================================
 
 function getOddsMovement(bet) {
@@ -1589,15 +1982,20 @@ function saveData() {
 
 function updateBalance() {
 
-    document
-        .getElementById("balance")
-        .textContent =
-        "$" + balance.toFixed(2);
+    const formattedBalance = "$" + balance.toLocaleString("en-US", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    });
+
+    const balanceElement = document.getElementById("balance");
+    if (balanceElement) balanceElement.textContent = formattedBalance;
+
+    const profileBalance = document.getElementById("profileBalance");
+    if (profileBalance) profileBalance.textContent = formattedBalance;
 
 }
 
 
-// ==================================================
 // DEPOSIT POPUP
 // ==================================================
 
