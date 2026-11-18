@@ -492,6 +492,43 @@ main {
 
 .market-buttons button b {
     color: #f5a623;
+}/* MARKET BUTTONS */
+
+.market-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.market-buttons button {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #222731;
+
+    border: 1px solid #343a46;
+
+    color: #e8ebef;
+
+    padding: 12px 13px;
+
+    border-radius: 8px;
+
+    text-align: left;
+
+    transition: 0.2s;
+}
+
+.market-buttons button:hover {
+    background: #292e38;
+    border-color: #f5a623;
+}
+
+.market-buttons button b {
+    color: #f5a623;
 }
 
 
@@ -897,9 +934,7 @@ main {
 /* OLD PAYOUT */
 
 .payout-row {
-    display: flex;
-
-    justify-content: space-between;
+    display: flex;    justify-content: space-between;
 
     padding: 12px 0;
 
@@ -1357,9 +1392,7 @@ main {
 
 
 .deposit-icon {
-    font-size: 42px;
-
-    margin-bottom: 10px;
+    font-size: 42px;    margin-bottom: 10px;
 }
 
 
@@ -1782,4 +1815,38 @@ main {
         grid-template-columns: 1fr;
     }
 
+}
+
+/* =========================
+   POLITICS MARKET CARD
+========================= */
+.politics-market {
+    max-width: 760px;
+    width: 100%;
+}
+
+.politics-market > small {
+    display: inline-block;
+    color: #f5a623;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.politics-market h3 {
+    margin-bottom: 12px;
+}
+
+.politics-description, .politics-disclaimer {
+    color: #aeb4c0;
+    line-height: 1.6;
+    font-size: 13px;
+    margin: 12px 0 16px;
+}
+
+.politics-disclaimer {
+    border-top: 1px solid #303642;
+    padding-top: 12px;
+    font-size: 11px;
 }
