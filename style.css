@@ -1,5 +1,5 @@
 /* =========================
-   PRIMEBET GLOBAL
+   GAMBA BET GLOBAL
 ========================= */
 
 * {
@@ -24,30 +24,21 @@ button {
     display: none !important;
 }
 
-
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 header {
     width: 100%;
     min-height: 75px;
     background: #171a21;
     border-bottom: 1px solid #292e38;
-
     display: flex;
     align-items: center;
     gap: 25px;
-
     padding: 14px 30px;
-
     position: sticky;
     top: 0;
     z-index: 1000;
 }
-
-
-/* LOGO */
 
 .logo {
     font-size: 27px;
@@ -59,7 +50,6 @@ header {
 .logo span {
     color: #f5a623;
 }
-
 
 /* NAVIGATION */
 
@@ -73,13 +63,10 @@ nav {
     border: none;
     background: transparent;
     color: #aeb4c0;
-
     padding: 11px 18px;
     border-radius: 8px;
-
     font-size: 14px;
     font-weight: 700;
-
     transition: 0.2s;
 }
 
@@ -93,16 +80,13 @@ nav {
     color: #111;
 }
 
-
 /* BALANCE */
 
 .balance-box {
     background: #20242d;
     border: 1px solid #303642;
-
     padding: 8px 15px;
     border-radius: 9px;
-
     display: flex;
     flex-direction: column;
     min-width: 125px;
@@ -118,19 +102,15 @@ nav {
     margin-top: 2px;
 }
 
-
 /* DEPOSIT */
 
 .deposit-btn {
     border: none;
     background: #1fc77a;
     color: #07130d;
-
     font-weight: 800;
     padding: 11px 17px;
-
     border-radius: 8px;
-
     transition: 0.2s;
 }
 
@@ -139,24 +119,16 @@ nav {
     filter: brightness(1.08);
 }
 
-
-
-/* =========================
-   MAIN
-========================= */
+/* MAIN */
 
 main {
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
-
     padding: 30px;
 }
 
-
-/* =========================
-   PAGE TITLE
-========================= */
+/* PAGE TITLE */
 
 .page-title {
     margin: 25px 0;
@@ -172,34 +144,23 @@ main {
     font-size: 14px;
 }
 
-
-
-/* =========================
-   SPORTS TABS
-========================= */
+/* SPORTS TABS */
 
 .sports-tabs {
     display: flex;
     gap: 10px;
-
     margin-bottom: 20px;
-
     overflow-x: auto;
 }
 
 .sport-tab {
     border: 1px solid #303642;
-
     background: #191d24;
     color: #aeb4c0;
-
     padding: 12px 20px;
-
     border-radius: 9px;
-
     font-weight: 700;
     white-space: nowrap;
-
     transition: 0.2s;
 }
 
@@ -214,11 +175,7 @@ main {
     border-color: #f5a623;
 }
 
-
-
-/* =========================
-   SPORTS CONTAINER
-========================= */
+/* SPORTS CONTAINER */
 
 #sportsContainer {
     display: flex;
@@ -226,20 +183,13 @@ main {
     gap: 20px;
 }
 
-
-
-/* =========================
-   GAME CARDS
-========================= */
+/* GAME CARDS */
 
 .game-card {
     background: #181c23;
-
     border: 1px solid #2b303a;
     border-radius: 13px;
-
     padding: 20px;
-
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.18);
 }
 
@@ -247,7 +197,6 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     margin-bottom: 18px;
 }
 
@@ -268,45 +217,29 @@ main {
 
 .team {
     background: #20242d;
-
     padding: 15px;
-
     border-radius: 9px;
-
     text-align: center;
     font-weight: 700;
 }
 
-
-
-/* =========================
-   BETTING BUTTONS
-========================= */
+/* BETTING BUTTONS */
 
 .odds-grid {
     display: grid;
-
     grid-template-columns: repeat(2, 1fr);
-
     gap: 10px;
-
     margin-top: 15px;
 }
 
 .odds-button {
     background: #222731;
-
     border: 1px solid #343a46;
-
     color: white;
-
     padding: 13px;
-
     border-radius: 8px;
-
     display: flex;
     justify-content: space-between;
-
     transition: 0.2s;
 }
 
@@ -319,11 +252,7 @@ main {
     color: #f5a623;
 }
 
-
-
-/* =========================
-   PROPS
-========================= */
+/* PROPS */
 
 .props-section {
     margin-top: 25px;
@@ -336,19 +265,14 @@ main {
 
 .props-grid {
     display: grid;
-
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-
     gap: 15px;
 }
 
 .prop-card {
     background: #181c23;
-
     border: 1px solid #2b303a;
-
     border-radius: 12px;
-
     padding: 18px;
 }
 
@@ -362,11 +286,7 @@ main {
     gap: 8px;
 }
 
-
-
-/* =========================
-   FUTURES
-========================= */
+/* FUTURES */
 
 .futures-section {
     margin-top: 25px;
@@ -374,27 +294,18 @@ main {
 
 .futures-grid {
     display: grid;
-
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-
     gap: 15px;
 }
 
 .future-card {
     background: #181c23;
-
     border: 1px solid #2b303a;
-
     border-radius: 12px;
-
     padding: 18px;
 }
 
-
-
-/* =========================
-   MARKETS
-========================= */
+/* MARKETS */
 
 .market-category {
     margin-top: 35px;
@@ -407,27 +318,15 @@ main {
 
 .market-grid {
     display: grid;
-
-    grid-template-columns: repeat(
-        auto-fit,
-        minmax(280px, 1fr)
-    );
-
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 16px;
 }
 
-
-/* MARKET CARD */
-
 .market-card {
     background: #181c23;
-
     border: 1px solid #2b303a;
-
     border-radius: 13px;
-
     padding: 19px;
-
     transition: 0.2s;
 }
 
@@ -438,22 +337,16 @@ main {
 
 .market-card small {
     color: #747d8c;
-
     font-weight: 700;
-
     font-size: 11px;
-
     letter-spacing: 0.8px;
 }
 
 .market-card h3 {
     margin: 7px 0 15px;
-
     font-size: 17px;
-
     line-height: 1.35;
 }
-
 
 /* MARKET BUTTONS */
 
@@ -465,60 +358,15 @@ main {
 
 .market-buttons button {
     width: 100%;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     background: #222731;
-
     border: 1px solid #343a46;
-
     color: #e8ebef;
-
     padding: 12px 13px;
-
     border-radius: 8px;
-
     text-align: left;
-
-    transition: 0.2s;
-}
-
-.market-buttons button:hover {
-    background: #292e38;
-    border-color: #f5a623;
-}
-
-.market-buttons button b {
-    color: #f5a623;
-}/* MARKET BUTTONS */
-
-.market-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.market-buttons button {
-    width: 100%;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    background: #222731;
-
-    border: 1px solid #343a46;
-
-    color: #e8ebef;
-
-    padding: 12px 13px;
-
-    border-radius: 8px;
-
-    text-align: left;
-
     transition: 0.2s;
 }
 
@@ -531,38 +379,21 @@ main {
     color: #f5a623;
 }
 
-
-
-/* =========================
-   MARKET MOVERS
-========================= */
+/* MARKET MOVERS */
 
 .market-movers-section {
-    background: linear-gradient(
-        135deg,
-        #1c2028,
-        #15181e
-    );
-
+    background: linear-gradient(135deg, #1c2028, #15181e);
     border: 1px solid #343a46;
-
     border-radius: 15px;
-
     padding: 22px;
-
     margin-bottom: 30px;
-
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
-
 .market-movers-heading {
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
     margin-bottom: 18px;
 }
 
@@ -576,168 +407,98 @@ main {
     font-size: 13px;
 }
 
-
-/* LIVE */
-
 .live-indicator {
     display: flex;
-
     align-items: center;
-
     gap: 7px;
-
     color: #43df94;
-
     font-size: 12px;
-
     font-weight: 800;
 }
 
 .live-indicator span {
     width: 8px;
     height: 8px;
-
     background: #43df94;
-
     border-radius: 50%;
-
     box-shadow: 0 0 10px rgba(67, 223, 148, 0.8);
-
     animation: livePulse 1.5s infinite;
 }
 
-
 @keyframes livePulse {
-
-    0% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0.35;
-    }
-
-    100% {
-        opacity: 1;
-    }
-
+    0% { opacity: 1; }
+    50% { opacity: 0.35; }
+    100% { opacity: 1; }
 }
-
-
-/* MOVERS LIST */
 
 .market-movers-list {
     display: grid;
-
-    grid-template-columns:
-        repeat(auto-fit, minmax(230px, 1fr));
-
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 10px;
 }
 
-
 .market-mover {
     width: 100%;
-
     background: #20242d;
-
     border: 1px solid #303642;
-
     color: white;
-
     padding: 14px;
-
     border-radius: 10px;
-
     text-align: left;
-
     transition: 0.2s;
 }
 
 .market-mover:hover {
     border-color: #f5a623;
-
     background: #272c35;
-
     transform: translateY(-2px);
 }
 
 .market-mover-title {
     display: block;
-
     font-weight: 700;
-
     margin-bottom: 8px;
 }
 
 .market-mover-odds {
     color: #f5a623;
-
     font-weight: 900;
-
     font-size: 16px;
-}
-
-
-
-/* =========================
-   BET SLIP
-========================= */
+}/* BET SLIP */
 
 .bet-slip {
     position: fixed;
-
     right: 25px;
     bottom: 25px;
-
     width: 360px;
-
     background: #171a21;
-
     border: 1px solid #3a414d;
-
     border-radius: 15px;
-
     padding: 23px;
-
     z-index: 2000;
-
-    box-shadow:
-        0 15px 50px rgba(0, 0, 0, 0.55);
-
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.55);
     animation: slipIn 0.25s ease;
 }
 
-
 @keyframes slipIn {
-
     from {
         transform: translateY(20px);
         opacity: 0;
     }
-
     to {
         transform: translateY(0);
         opacity: 1;
     }
-
 }
-
 
 .close-slip {
     position: absolute;
-
     right: 13px;
     top: 10px;
-
     background: transparent;
-
     border: none;
-
     color: #89919e;
-
     font-size: 25px;
-
     line-height: 1;
 }
 
@@ -745,42 +506,27 @@ main {
     color: white;
 }
 
-
 .bet-slip > small {
     color: #737c89;
-
     font-size: 10px;
-
     font-weight: 800;
-
     letter-spacing: 0.8px;
 }
 
-
 #selectedBet {
     margin-top: 8px;
-
     padding-right: 25px;
-
     font-size: 17px;
-
     line-height: 1.35;
 }
 
-
 .selected-odds {
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
     margin: 15px 0;
-
     padding: 11px 13px;
-
     background: #20242d;
-
     border-radius: 8px;
 }
 
@@ -793,37 +539,24 @@ main {
     font-size: 17px;
 }
 
-
-
-/* INPUT */
+/* BET SLIP INPUT */
 
 .bet-slip label {
     display: block;
-
     color: #aeb4c0;
-
     font-size: 13px;
-
     font-weight: 700;
-
     margin-bottom: 7px;
 }
 
 .bet-slip input {
     width: 100%;
-
     background: #0f1115;
-
     border: 1px solid #343a46;
-
     color: white;
-
     padding: 13px;
-
     border-radius: 8px;
-
     outline: none;
-
     font-size: 15px;
 }
 
@@ -831,72 +564,45 @@ main {
     border-color: #f5a623;
 }
 
-
-
-/* =========================
-   QUICK BETS
-========================= */
+/* QUICK BETS */
 
 .quick-bets {
     display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
+    grid-template-columns: repeat(4, 1fr);
     gap: 7px;
-
     margin: 10px 0 17px;
 }
 
 .quick-bets button {
     background: #252a33;
-
     border: 1px solid #363d48;
-
     color: #dce0e6;
-
     padding: 8px 4px;
-
     border-radius: 7px;
-
     font-size: 12px;
-
     font-weight: 700;
-
     transition: 0.2s;
 }
 
 .quick-bets button:hover {
     background: #f5a623;
-
     color: #111;
-
     border-color: #f5a623;
 }
 
-
-
-/* =========================
-   BET SLIP SUMMARY
-========================= */
+/* BET SLIP SUMMARY */
 
 .bet-slip-summary {
     border-top: 1px solid #2e343e;
-
     padding-top: 13px;
-
     margin-top: 5px;
 }
 
 .bet-slip-row {
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
     padding: 6px 0;
-
     font-size: 13px;
 }
 
@@ -908,409 +614,268 @@ main {
     color: white;
 }
 
-
 .bet-slip-row.profit strong {
     color: #42dc91;
 }
 
-
 .bet-slip-row.total {
     margin-top: 5px;
-
     padding-top: 12px;
-
     border-top: 1px solid #2e343e;
-
     font-size: 15px;
 }
 
 .bet-slip-row.total strong {
     color: #f5a623;
-
     font-size: 18px;
 }
-
 
 /* OLD PAYOUT */
 
 .payout-row {
-    display: flex;    justify-content: space-between;
-
+    display: flex;
+    justify-content: space-between;
     padding: 12px 0;
-
     color: #9aa2ae;
 }
-
-
 
 /* PLACE BET */
 
 .place-bet {
     width: 100%;
-
     margin-top: 15px;
-
     border: none;
-
     background: #f5a623;
-
     color: #111;
-
     font-size: 14px;
-
     font-weight: 900;
-
     padding: 14px;
-
     border-radius: 9px;
-
     transition: 0.2s;
 }
 
 .place-bet:hover {
     filter: brightness(1.1);
-
     transform: translateY(-1px);
 }
 
-
-
-/* =========================
-   BET CONFIRMATION
-========================= */
+/* BET CONFIRMATION */
 
 .bet-confirmation {
     position: fixed;
-
     right: 25px;
     top: 95px;
-
     width: 340px;
-
     background: #18221d;
-
     border: 1px solid #2f7e58;
-
     border-radius: 12px;
-
     padding: 15px 17px;
-
     z-index: 3000;
-
     display: flex;
-
     align-items: center;
-
     gap: 12px;
-
-    box-shadow:
-        0 10px 35px rgba(0, 0, 0, 0.4);
-
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
     animation: confirmationIn 0.35s ease;
 }
-
 
 .confirmation-icon {
     width: 35px;
     height: 35px;
-
     border-radius: 50%;
-
     background: #2fc77d;
-
     color: #07130d;
-
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     font-weight: 900;
-
     flex-shrink: 0;
-
     animation: checkPop 0.35s ease;
 }
 
-
 .confirmation-content {
     display: flex;
-
     flex-direction: column;
-
     gap: 3px;
 }
 
 .confirmation-content strong {
     color: #43df94;
-
     font-size: 14px;
 }
 
 .confirmation-content span {
     color: #e5e9ed;
-
     font-size: 12px;
 }
 
 .confirmation-content small {
     color: #7f8996;
-
     font-size: 11px;
 }
 
-
 @keyframes confirmationIn {
-
     from {
         opacity: 0;
         transform: translateX(30px);
     }
-
     to {
         opacity: 1;
         transform: translateX(0);
     }
-
 }
 
-
 @keyframes checkPop {
-
     0% {
         transform: scale(0.5);
     }
-
     70% {
         transform: scale(1.15);
     }
-
     100% {
         transform: scale(1);
     }
-
 }
 
-
-
-/* =========================
-   MY BETS
-========================= */
+/* MY BETS STATS */
 
 .stats {
     display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
-
     margin-bottom: 25px;
 }
 
-
 .stat-card {
     background: #181c23;
-
     border: 1px solid #2b303a;
-
     border-radius: 12px;
-
     padding: 18px;
 }
 
-
 .stat-card small {
     display: block;
-
     color: #838c99;
-
     font-size: 12px;
-
     margin-bottom: 7px;
 }
-
 
 .stat-card strong {
     font-size: 22px;
 }
 
-
-
-/* =========================
-   BET HISTORY
-========================= */
+/* BET HISTORY */
 
 .bet-history {
     display: flex;
-
     flex-direction: column;
-
     gap: 12px;
 }
 
-
 .bet-card {
     background: #181c23;
-
     border: 1px solid #2b303a;
-
     border-radius: 12px;
-
     padding: 18px;
 }
 
-
 .bet-card-header {
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
     margin-bottom: 12px;
 }
-
 
 .bet-id {
     color: #737d8b;
-
     font-size: 11px;
-
     font-family: monospace;
 }
 
-
 .bet-status {
     font-size: 11px;
-
     font-weight: 900;
-
     padding: 5px 8px;
-
     border-radius: 6px;
 }
 
-
 .bet-status.pending {
     background: rgba(245, 166, 35, 0.13);
-
     color: #f5a623;
 }
 
-
 .bet-status.won {
     background: rgba(47, 199, 125, 0.13);
-
     color: #43df94;
 }
 
-
 .bet-status.lost {
     background: rgba(255, 80, 80, 0.12);
-
     color: #ff7777;
 }
 
-
 .bet-selection {
     font-weight: 800;
-
     font-size: 15px;
-
     margin-bottom: 12px;
 }
 
-
 .bet-details {
     display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
 
-
 .bet-detail {
     background: #20242d;
-
     padding: 10px;
-
     border-radius: 7px;
 }
 
-
 .bet-detail small {
     display: block;
-
     color: #747d8b;
-
     font-size: 10px;
-
     margin-bottom: 4px;
 }
-
 
 .bet-detail strong {
     font-size: 13px;
 }
 
-
-
-/* =========================
-   ODDS MOVEMENT
-========================= */
+/* ODDS MOVEMENT */
 
 .history-odds {
     display: flex;
-
     align-items: center;
-
     gap: 5px;
 }
-
 
 .odds-up {
     color: #43df94 !important;
 }
 
-
 .odds-down {
     color: #ff7474 !important;
 }
-
 
 .odds-same {
     color: #f5a623 !important;
 }
 
-
 .opened-odds {
     display: block;
-
     margin-top: 5px;
-
     color: #747d8b;
-
     font-size: 10px;
 }
 
-
-
-/* =========================
-   EMPTY BETS
-========================= */
+/* EMPTY BETS */
 
 .empty-bets {
     text-align: center;
-
     padding: 70px 20px;
-
     background: #181c23;
-
     border: 1px solid #2b303a;
-
     border-radius: 13px;
 }
 
@@ -1320,69 +885,39 @@ main {
 
 .empty-bets p {
     color: #808996;
-
     font-size: 13px;
-}
-
-
-
-/* =========================
-   DEPOSIT MODAL
-========================= */
+}/* DEPOSIT MODAL */
 
 .deposit-modal {
     position: fixed;
-
     inset: 0;
-
     background: rgba(0, 0, 0, 0.72);
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     z-index: 5000;
-
     padding: 20px;
 }
 
-
 .deposit-box {
     position: relative;
-
     width: 100%;
-
     max-width: 430px;
-
     background: #181c23;
-
     border: 1px solid #343a46;
-
     border-radius: 15px;
-
     padding: 30px;
-
     text-align: center;
-
-    box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
-
 
 .deposit-close {
     position: absolute;
-
     top: 12px;
     right: 15px;
-
     border: none;
-
     background: transparent;
-
     color: #858e9b;
-
     font-size: 25px;
 }
 
@@ -1390,225 +925,157 @@ main {
     color: white;
 }
 
-
 .deposit-icon {
-    font-size: 42px;    margin-bottom: 10px;
+    font-size: 42px;
+    margin-bottom: 10px;
 }
-
 
 .deposit-box h2 {
     margin-bottom: 8px;
 }
 
-
 .deposit-box p {
     color: #929aa7;
-
     font-size: 13px;
-
     margin-bottom: 15px;
 }
 
-
 .deposit-address {
     background: #0f1115;
-
     border: 1px solid #303642;
-
     color: #f5a623 !important;
-
     padding: 13px;
-
     border-radius: 8px;
-
     word-break: break-all;
-
     font-family: monospace;
-
     font-size: 12px !important;
 }
 
-
 .deposit-ok {
     width: 100%;
-
     border: none;
-
     background: #f5a623;
-
     color: #111;
-
     font-weight: 900;
-
     padding: 13px;
-
     border-radius: 8px;
-
     margin-top: 5px;
 }
 
-
-
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media (max-width: 800px) {
-
     header {
         flex-wrap: wrap;
-
         padding: 12px 15px;
-
         gap: 10px;
     }
-
 
     .logo {
         font-size: 23px;
     }
 
-
     nav {
         order: 3;
-
         width: 100%;
-
         justify-content: center;
     }
 
-
     .nav-btn {
         flex: 1;
-
         padding: 10px 8px;
-
         font-size: 12px;
     }
-
 
     .balance-box {
         margin-left: auto;
-
         min-width: 105px;
     }
 
-
     .deposit-btn {
         padding: 10px 12px;
-
         font-size: 12px;
     }
-
 
     main {
         padding: 20px 15px;
     }
 
-
     .page-title h1 {
         font-size: 26px;
     }
-
 
     .market-grid {
         grid-template-columns: 1fr;
     }
 
-
     .market-movers-list {
         grid-template-columns: 1fr;
     }
-
 
     .stats {
         grid-template-columns: 1fr;
     }
 
-
     .bet-slip {
         left: 10px;
         right: 10px;
-
         bottom: 10px;
-
         width: auto;
-
         max-height: 85vh;
-
         overflow-y: auto;
     }
-
 
     .bet-confirmation {
         left: 10px;
         right: 10px;
-
         top: 90px;
-
         width: auto;
     }
-
 
     .bet-details {
         grid-template-columns: 1fr;
     }
-
 }
 
-
-
-/* =========================
-   SMALL PHONES
-========================= */
+/* SMALL PHONES */
 
 @media (max-width: 450px) {
-
     header {
         padding: 10px;
     }
-
 
     .logo {
         font-size: 20px;
     }
 
-
     .balance-box {
         min-width: 90px;
-
         padding: 6px 9px;
     }
-
 
     .balance-box strong {
         font-size: 14px;
     }
 
-
     .deposit-btn {
         padding: 8px 9px;
     }
-
 
     .sports-tabs {
         gap: 6px;
     }
 
-
     .sport-tab {
         padding: 10px 13px;
     }
 
-
     .quick-bets button {
         font-size: 11px;
     }
-
 }
-/* ========================= */
-/* PROFILE */
-/* ========================= */
+
+/* PROFILE HEADER */
 
 .profile-header {
     display: flex;
@@ -1655,7 +1122,6 @@ main {
     letter-spacing: 0.5px;
 }
 
-
 /* PROFILE CARDS */
 
 .profile-card {
@@ -1672,7 +1138,6 @@ main {
     font-size: 20px;
 }
 
-
 /* BIO */
 
 .profile-bio {
@@ -1681,7 +1146,6 @@ main {
     font-size: 16px;
     margin: 0;
 }
-
 
 /* ACCOUNT INFO */
 
@@ -1709,7 +1173,6 @@ main {
     color: #ffffff;
     font-size: 15px;
 }
-
 
 /* ACHIEVEMENTS */
 
@@ -1751,7 +1214,6 @@ main {
     font-size: 11px;
 }
 
-
 /* PROFILE BUTTON */
 
 .profile-btn {
@@ -1771,11 +1233,9 @@ main {
     color: #f5a623;
 }
 
-
-/* MOBILE */
+/* PROFILE MOBILE */
 
 @media (max-width: 800px) {
-
     .profile-header {
         padding: 20px;
     }
@@ -1797,11 +1257,9 @@ main {
     .achievement-grid {
         grid-template-columns: 1fr 1fr;
     }
-
 }
 
 @media (max-width: 500px) {
-
     .profile-header {
         flex-direction: column;
         text-align: center;
@@ -1814,12 +1272,8 @@ main {
     .achievement-grid {
         grid-template-columns: 1fr;
     }
+}/* POLITICS MARKET CARD */
 
-}
-
-/* =========================
-   POLITICS MARKET CARD
-========================= */
 .politics-market {
     max-width: 760px;
     width: 100%;
@@ -1838,7 +1292,8 @@ main {
     margin-bottom: 12px;
 }
 
-.politics-description, .politics-disclaimer {
+.politics-description,
+.politics-disclaimer {
     color: #aeb4c0;
     line-height: 1.6;
     font-size: 13px;
@@ -1849,4 +1304,80 @@ main {
     border-top: 1px solid #303642;
     padding-top: 12px;
     font-size: 11px;
+}
+
+/* GAMBA BET BRANDING */
+
+.logo {
+    color: #ffffff;
+}
+
+.logo span {
+    color: #f5a623;
+}
+
+/* POSITIONS AND CASH DISPLAY */
+
+#positionsBalance,
+#balance {
+    font-variant-numeric: tabular-nums;
+}
+
+/* GENERAL BUTTON EFFECTS */
+
+button {
+    transition: background 0.2s, border-color 0.2s,
+                color 0.2s, transform 0.2s;
+}
+
+button:focus-visible,
+input:focus-visible {
+    outline: 2px solid #f5a623;
+    outline-offset: 3px;
+}
+
+/* DEMO DISCLAIMER */
+
+.demo-disclaimer {
+    color: #858e9b;
+    font-size: 11px;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* EXTRA MOBILE FIXES */
+
+@media (max-width: 800px) {
+    .profile-btn {
+        padding: 9px 10px;
+        font-size: 12px;
+    }
+
+    .market-card {
+        min-width: 0;
+    }
+
+    .politics-market {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    .page-title h1 {
+        font-size: 24px;
+    }
+
+    .market-card {
+        padding: 15px;
+    }
+
+    .market-card h3 {
+        font-size: 15px;
+    }
+
+    .market-buttons button {
+        padding: 11px;
+        font-size: 13px;
+    }
 }
